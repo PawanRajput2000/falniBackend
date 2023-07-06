@@ -5,15 +5,16 @@ const mongoose = require("mongoose")
 
 const registration = new mongoose.Schema({
 
-name :{
+FullName :{
     type : String,
     required: true 
 },
-email : {
+Email : {
     type : String,
-    required : true 
+    required : true,
+    unique :true 
 },
-password :{
+Password :{
     type : String,
     required: true 
 }
@@ -21,6 +22,4 @@ password :{
 })
 
 
-const registrationSchema   = mongoose.model("registration", registration)
-
-module.exports = {registrationSchema}
+module.exports = mongoose.model("registration", registration)
