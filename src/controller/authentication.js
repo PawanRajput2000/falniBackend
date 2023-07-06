@@ -6,8 +6,8 @@ let Singup  = async(req,res)=>{
     try {
         
          console.log(req.body)
-        let {FullName,Email,Password} = req.body 
-        if (!FullName) {
+        let {Fullname,Email,Password} = req.body 
+        if (!Fullname) {
             return res.status(400).send({ status: false, data: "fullname is require" })
         }
         if (!Email) {
