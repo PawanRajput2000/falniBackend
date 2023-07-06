@@ -5,7 +5,7 @@ const mongoose = require("mongoose")
 
 const registration = new mongoose.Schema({
 
-FullName :{
+Fullname :{
     type : String,
     required: true 
 },
