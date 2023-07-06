@@ -1,8 +1,10 @@
 const express = require("express")
+const cors = require("cors")
 const app = express()
 const router = require("./routes/route")
 const mongoose = require("mongoose")
 app.use(express.json())
+app.use(cors())
 
 mongoose.connect("mongodb+srv://falniapp:Uj03QZNADA4QhnWQ@falniapp.oxhwst0.mongodb.net/", { useNewUrlParser: true })
     .then(() => {
